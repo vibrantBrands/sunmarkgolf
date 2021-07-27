@@ -1,0 +1,41 @@
+.sunmark {
+
+	.photos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include flex-col-layout();
+
+		.sidebar {
+			 @media only screen and (max-width: $lg-breakpoint) {
+                padding-top: 0px;
+            }
+		}
+
+		h2 {
+			 @media only screen and (max-width: $lg-breakpoint) {
+                margin-top: 0px;
+            }
+		}
+
+		>div {
+			margin-bottom: 20px;
+			position: relative;
+			width: 48%;
+			
+			@include mobile-full-width();
+
+			.enlarge {
+				background: $sunmark-green;
+				border-radius: 20px;
+				bottom: 10px;
+				color: $white;
+				font-size: 0.8em;
+				right: 10px;
+				padding: 5px;
+				position: absolute;
+			}
+		}
+	}
+}

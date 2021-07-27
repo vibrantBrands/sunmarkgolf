@@ -1,0 +1,330 @@
+.sunmark {
+
+    .hero {
+        background: url('../img/hero-image-golf.jpg') no-repeat;
+        background-position: 0 -50px;
+        background-size: cover;
+        height: 660px;
+        padding-bottom: 10px;
+        text-align: center;
+
+        a {
+            color: $sunmark-blue;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: $lg-breakpoint) {
+        	background-position: 0 0;
+            height: 600px;
+        }
+        @media only screen and (max-width: $sm-breakpoint) {
+            background-position: 0 0;
+            height: 650px;
+        }
+
+        .logo {
+            margin: 20px auto;
+            width: 340px;
+
+            @media only screen and (max-width: $xl-breakpoint) {
+                margin-bottom: 0;
+            }
+
+            @media only screen and (max-width: $lg-breakpoint) {
+                max-width: 350px;
+                width: 250px;
+            }
+        }
+
+        h1 {
+            @media only screen and (max-width: $lg-breakpoint) {
+                font-size: 30px;
+                margin: 0 auto 50px;
+                width: 80%;
+            }
+            @media only screen and (max-width: $sm-breakpoint) {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+
+        .infobox {
+            align-items: center;
+            background: rgba(256, 256, 256, .7);
+            border-radius: 10px;
+            display: flex;
+            font-size: 20px;
+            line-height: 25px;
+            margin: 280px auto 40px;
+            padding: 20px;
+            width: 90%;
+
+            @media only screen and (max-width: $lg-breakpoint) {
+                flex-direction: column;
+                margin: 40px auto 80px;
+                width: 80%;
+            }
+
+            @media only screen and (max-width: 415px) {
+                margin: 40px auto 140px;
+            }
+
+            >div {
+                font-weight: 800;
+
+                span {
+                    font-weight: 500;
+                }
+
+
+                &:nth-child(2) {
+                    width: 60%;
+                    padding: 0 40px;
+
+                    @include mobile-full-width();
+
+                    @media only screen and (max-width: $lg-breakpoint) {
+                        padding: 20px 0;
+                    }
+                }
+
+                &:nth-child(3) {
+                    border-left: 3px $sunmark-blue solid;
+                    width: 20%;
+
+                    @include mobile-full-width();
+
+                    @media only screen and (max-width: $lg-breakpoint) {
+                        border: 0;
+                        border-top: 1px solid $sunmark-blue;
+                    }
+                }
+
+                @media only screen and (max-width: $lg-breakpoint) {
+                    padding: 20px 0;
+                }
+            }
+
+            .date {
+                border-right: 3px $sunmark-blue solid;
+                display: flex;
+                flex-direction: column;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 24px;
+                width: 20%;
+
+                span {
+                    font-size: 50px;
+                    margin-bottom: 5px;
+                }
+
+                @media only screen and (max-width: $lg-breakpoint) {
+                    align-items: center;
+                    border-bottom: 1px solid $sunmark-blue;
+                    border: 0;
+                    flex-direction: row-reverse;
+                    font-size: 40px;
+                    justify-content: center;
+
+                    span {
+                        font-size: 40px;
+                        margin: 0 8px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+
+        .container {
+            display: flex;
+            padding: 40px 80px;
+            position: relative;
+
+            @media only screen and (max-width: $lg-breakpoint) {
+                flex-direction: column;
+            }
+
+            .content {
+                text-align: left;
+                max-width: 60%;
+
+                @media only screen and (max-width: $lg-breakpoint) {
+                    max-width: none;
+                }
+
+                .btn {
+                    a {
+                        background: $sunmark-blue;
+                        border-radius: 20px;
+                        color: white;
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 10px 25px;
+
+                        &:hover {
+                            background: lighten($sunmark-blue, 20%);
+                            transition: background 0.3s ease-out;
+                        }
+                    }
+                }
+            }
+
+            &.photos {
+                width: none;
+
+                @media only screen and (max-width: $lg-breakpoint) {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+
+    .sponsors {
+
+        .bar {
+            background: $sunmark-green;
+            margin: 30px 0;
+            padding: 5px 0;
+
+            h2 {
+                color: $white;
+                margin: 0 auto;
+            }
+        }
+
+        .logos {
+
+            .slick-list {
+
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+
+                    >div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            .slick-arrow {
+                //background: $sunmark-green !important;
+            }
+            .slick-prev {
+
+                &:after {
+                    content: "";
+                    display: block;
+                    border: solid $sunmark-green;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(135deg);
+                }
+            }
+
+            .slick-next {
+
+                &:before {
+                    content: "";
+                    display: block;
+                    border: solid $sunmark-green;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            @media only screen and (max-width: $sm-breakpoint) {
+                width: 90%;
+            }
+        }
+
+        .container {
+
+        	img {
+        		width: 200px !important;
+        	}
+        }
+    }
+
+    .schedule {
+    	text-align: left;
+
+    	h2 {
+    		margin-top: 0;
+    	}
+
+    	p {
+    		color: $sunmark-blue;
+    		font-size: 20px;
+    	}
+
+    	.container {
+    		display: flex;
+    		margin-top: 100px;
+
+    		@include flex-col-layout();
+
+            @media only screen and (max-width: $lg-breakpoint) {
+                margin-top: 240px;
+            }
+
+    		@media only screen and (max-width: $sm-breakpoint) {
+                margin-top: 400px;
+            }
+
+            @media only screen and (max-width: 440px) {
+                margin-top: 450px;
+            }
+
+    		>div {
+    			width: 50%;
+
+    			 @include mobile-full-width();
+
+    			&:first-child {
+    				padding-left: 10%;
+
+                    @media only screen and (max-width: $lg-breakpoint) {
+                        padding-left: 15%;
+                    }
+    			}
+
+    			&:nth-child(2) {
+    				align-items: center;
+    				justify-content: flex-start;
+    				display: flex;
+                    padding-left: 8%;
+
+    				@media only screen and (max-width: $lg-breakpoint) {
+                		margin-top: 50px;
+                         padding-left: 12%;
+            		}
+
+                    @media only screen and (max-width: $md-breakpoint) {
+                        margin-top: 50px;
+                    }
+
+    				p {
+    					line-height: 1.3em;
+    					width: 60%;
+    				}
+
+    				img {
+    					height: auto;
+    					width: 75px;
+    				}
+    			}
+    		}
+
+    		span {
+    			font-weight: 800;
+    		}
+    	}
+    }
+}
